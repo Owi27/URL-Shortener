@@ -150,7 +150,7 @@ class Form extends React.Component
                     <div className="form-group">
                         <label htmlFor="basic-url">Your Shortened URL</label>
                         <div className="input-group mb-3">
-                            <span className="input-group-text">surl.com/</span>
+                            <span className="input-group-text">slink.com/</span>
                         </div>
                         <input id="preferedAlias" onChange={this.HandleChange} value={this.state.preferedAlias} className={this.HasError("preferedAlias") ? "form-control is-invalid" : "form-control"} type="text" placeholder="ex. 7kn14 (Optional)"/>
                     </div>
