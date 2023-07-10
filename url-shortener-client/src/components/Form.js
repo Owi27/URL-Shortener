@@ -40,12 +40,12 @@ class Form extends React.Component
 
         //If the user inputs an extension use it, if not generate
         var generateKey = nanoid(5);
-        var generatedURL = " " + generateKey
+        var generatedURL = "https://slink-47c4feadcd83.herokuapp.com/" + generateKey
 
         if (this.state.preferedAlias !== '')
         {
             generateKey = this.state.preferedAlias
-            generatedURL = " " + this.state.preferedAlias
+            generatedURL = "https://slink-47c4feadcd83.herokuapp.com/" + this.state.preferedAlias
         }
 
         const db = getDatabase(); //DB reference
@@ -150,7 +150,7 @@ class Form extends React.Component
                     <div className="form-group">
                         <label htmlFor="basic-url">Your Shortened URL</label>
                         <div className="input-group mb-3">
-                            <span className="input-group-text">surl.com/</span>
+                            <span className="input-group-text">https://slink-47c4feadcd83.herokuapp.com/</span>
                         </div>
                         <input id="preferedAlias" onChange={this.HandleChange} value={this.state.preferedAlias} className={this.HasError("preferedAlias") ? "form-control is-invalid" : "form-control"} type="text" placeholder="ex. 7kn14 (Optional)"/>
                     </div>
