@@ -40,12 +40,12 @@ class Form extends React.Component
 
         //If the user inputs an extension use it, if not generate
         var generateKey = nanoid(5);
-        var generatedURL = " " + generateKey
+        var generatedURL = "slink.com" + generateKey
 
         if (this.state.preferedAlias !== '')
         {
             generateKey = this.state.preferedAlias
-            generatedURL = " " + this.state.preferedAlias
+            generatedURL = "slink.com" + this.state.preferedAlias
         }
 
         const db = getDatabase(); //DB reference
