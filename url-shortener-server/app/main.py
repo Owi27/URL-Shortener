@@ -3,9 +3,7 @@ import firebase_admin
 from firebase_admin import db
 import os
 
-cred_obj = firebase_admin.credentials.Certificate(
-    "./url-shortener-server/ServiceAccountKey.json"
-)
+cred_obj = firebase_admin.credentials.Certificate("./ServiceAccountKey.json")
 default_app = firebase_admin.initialize_app(
     cred_obj,
     {"databaseURL": "https://url-shortener-bcfd8-default-rtdb.firebaseio.com/"},
